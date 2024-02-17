@@ -1,18 +1,22 @@
 import React from 'react'
 import './Card.css'
 
-function card() {
+function Card(props) {
   return (
-    <div>
-        <div className="card">
-         <img src="https://insanelygoodrecipes.com/wp-content/uploads/2022/12/Fresh-and-Orgaic-Pink-Pomegranate.jpg" className="card-img-top" />
+    <div className='body'>
+    <div className="row">
+      <div className="column">
+        <div className=" card ">
+         <img src={props.image} className="card-img-top" />
              <div className="card-body">
-               <h5 className="card-title justify d-flex justify-content-center">Apple</h5>
+               <h5 className="card-title justify d-flex justify-content-center">{props.name}</h5>
               
              </div>
         </div>
+      </div>
+  </div>
   </div>
   )
 }
 
-export default card
+export default Card

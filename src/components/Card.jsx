@@ -6,7 +6,7 @@ function Card(props) {
     
     <div className="container">
       <div className='row'>
-        <div className='col-md-3'>
+        <div className='col-md-3 '>
 
         <div className=" card ">
          <img src={props.image} className="card-img-top" height={'200px'} width={'170px'}  />

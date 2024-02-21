@@ -11,6 +11,11 @@ const contents=[{
     id:3,
     fruitname:'Banana',
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnnjIIC_3f58zUMU18rAjMg-eq8spG7UNXA&usqp=CAU"
+},
+{
+    id:4,
+    fruitname:'jackfruit',
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnnjIIC_3f58zUMU18rAjMg-eq8spG7UNXA&usqp=CAU"
 }];
 
 export default contents;

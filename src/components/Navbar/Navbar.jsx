@@ -1,5 +1,16 @@
 import React from 'react'
 import './Navbar.css'
+import '../../AppCard.css'
+import Cards from '../../Cards.jsx'
+import contents from '../../contents'
+
+function createCard(content){
+  return (<Cards 
+    key={1}
+    name={content.fruitname}          
+    image={content.img}/>
+  );  
+}
 
 function Navbar() {
   return (
@@ -22,6 +33,12 @@ function Navbar() {
     </div>
   </div>
 </nav>
+
+  
+<div className='map'>
+      {contents.map(createCard)}
+      </div>
+
     </div>
   )
 }

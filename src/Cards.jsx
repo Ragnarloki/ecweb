@@ -1,7 +1,6 @@
 import React from 'react'
 import './Card.css'
-
-function Card(props) {
+function Cards(props) {
   return (
     
         
@@ -16,4 +15,4 @@ function Card(props) {
   )
 }
 
-export default Card
+export default Cards

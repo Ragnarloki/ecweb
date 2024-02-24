@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from './components/Navbar/Navbar'
 
 function Craft() {
     
+
     return (
+        <div>
+            <Navbar/>
+       
         <div className="container-fluid">
   <div className="row">
     <div className="col-4">
@@ -12,6 +17,8 @@ function Craft() {
       2 of 3 (wider)
     </div>
   </div>
+  </div>
+
   </div>
   )
 }

@@ -1,25 +1,12 @@
 import React from 'react'
 import './Navbar.css'
-import '../../AppCard.css'
-import Cards from '../../Cards.jsx'
-import contents from '../../contents'
-
-
-function createCard(content){
-
-  return (<Cards 
-    key={content.id}
-    name={content.fruitname}          
-    image={content.img}/>
-  );  
-}
 
 function Navbar() {
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">shop-card</a>
+    <a className="navbar-brand" href="/ecweb/">shop-card</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -35,12 +22,6 @@ function Navbar() {
     </div>
   </div>
 </nav>
-
-  
-<div className='map'>
-      {contents.map(createCard)}
-      </div>
-
     </div>
   )
 }

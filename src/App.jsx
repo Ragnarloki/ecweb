@@ -3,15 +3,22 @@ import Navbar from './components/Navbar/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "jquery/dist/jquery.min.js"
 import 'bootstrap/dist/js/bootstrap.min.js'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Craft from './Craft'
+
 
 
 
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+     <Route path='/ecweb' element={<Navbar/>}></Route>
+     <Route path='/Craft' element={<Craft/>}></Route>
+   </Routes>
+</BrowserRouter>
+
   )
 }
 

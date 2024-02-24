@@ -1,33 +1,32 @@
 const contents=[{
     id:1,
-    fruitname:"pomegranate",
-    img:"https://insanelygoodrecipes.com/wp-content/uploads/2022/12/Fresh-and-Orgaic-Pink-Pomegranate.jpg"
+    fruitname:"JK PORTS",
+    img:"https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/q/h/q/-original-imagg7t2bjudx78m.jpeg?q=70"
 },{
     id:2,
-    fruitname:"apple",
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFo_Il63ryN-cT1KOd-K-JNZS-ju0bm3eBlA&usqp=CAU"
+    fruitname:"WHITE WALKERS",
+    img:"https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/f/d/y/6-2082-white-walkers-black-original-imag5y96qxxpey5q-bb.jpeg?q=70"
 },{
     id:3,
-    fruitname:'Banana',
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnnjIIC_3f58zUMU18rAjMg-eq8spG7UNXA&usqp=CAU"
+    fruitname:'HOTSTYLE',
+    img:"https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/p/i/e/6-f1rst-full-black-6-hotstyle-white-original-imaghmz9xa2yk8m9.jpeg?q=70"
 },
 {
     id:4,
-    fruitname:"apple",
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFo_Il63ryN-cT1KOd-K-JNZS-ju0bm3eBlA&usqp=CAU"
+    fruitname:"ROBBIE JHONS",
+    img:"https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/q/b/g/6-na-224-labbin-black-original-imagzh4sm6tza6yk.jpeg?q=70"
 },{
     id:5,
-    fruitname:'Banana',
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnnjIIC_3f58zUMU18rAjMg-eq8spG7UNXA&usqp=CAU"
+    fruitname:'BATA',
+    img:"https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/o/m/y/-original-imagzry3gugpvqty.jpeg?q=70"
 },{
     id:6,
-    fruitname:"orange",
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFo_Il63ryN-cT1KOd-K-JNZS-ju0bm3eBlA&usqp=CAU"
-
+    fruitname:"sneakers",
+    img:"https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/y/e/u/-original-imaghvb4u7wmbrbg.jpeg?q=70"
 },{
     id:7,
-    fruitname:"orange",
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFo_Il63ryN-cT1KOd-K-JNZS-ju0bm3eBlA&usqp=CAU"
+    fruitname:"BRUTON",
+    img:"https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/r/e/m/-original-imagsfdvuffvqx4x.jpeg?q=70"
 
 }];
 

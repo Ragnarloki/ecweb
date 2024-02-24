@@ -2,3 +2,8 @@
 * {
     box-sizing: border-box;
   }
+.card:hover{
+  background-color: antiquewhite;
+
+  box-shadow: 2px solid grey;
+}

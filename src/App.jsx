@@ -10,7 +10,7 @@ import contents from './contents'
 
 function createCard(content){
   return (<Card 
-    key={content.id}
+    key={1}
     name={content.fruitname}          
     image={content.img}/>
   );  
@@ -19,8 +19,9 @@ function App() {
   return (
     <div>
       <Navbar/>
+      <div className='map'>
       {contents.map(createCard)}
-      
+      </div>
     </div>
   )
 }

@@ -4,9 +4,11 @@ import '../../AppCard.css'
 import Cards from '../../Cards.jsx'
 import contents from '../../contents'
 
+
 function createCard(content){
+
   return (<Cards 
-    key={1}
+    key={content.id}
     name={content.fruitname}          
     image={content.img}/>
   );  

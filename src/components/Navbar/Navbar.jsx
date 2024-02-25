@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {MdShoppingCart} from 'react-icons/md'
 import './Navbar.css'
 import Cards from '../../Cards'
+import { Link } from 'react-router-dom'
 
 
 
@@ -18,9 +19,9 @@ function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="cart"><MdShoppingCart size={'30px'}/>
+          <Link to={'/ecweb/cart'} className="nav-link active" aria-current="page"><MdShoppingCart size={'30px'}/>
           <sup>{Cards.count}</sup>
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="#">Link</a>

@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
     <Routes>
      <Route path='/ecweb' element={<Collection/>}></Route>
-     <Route path='/craft' element={<Craft/>}></Route>
+     <Route path='/ecweb/cart' element={<Craft/>}></Route>
    </Routes>
 </BrowserRouter>
 

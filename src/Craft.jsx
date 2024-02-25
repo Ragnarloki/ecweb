@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import './Craft.css'
 
-function Craft() {
+function Craft(props) {
     
 
     return (
@@ -12,7 +12,7 @@ function Craft() {
         <div className="container">
   <div className="row">
     <div className="col-sm-8">
-      <img  className='craftimg' src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/q/h/q/-original-imagg7t2bjudx78m.jpeg?q=70" alt=""/>
+      <img  className='craftimg' src={props.image} alt=""/>
     </div>
     <div className="col-sm-4">
       

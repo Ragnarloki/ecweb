@@ -9,7 +9,8 @@ function createCard(content){
   return (<Cards 
     key={content.id}
     name={content.fruitname}          
-    image={content.img}/>
+    image={content.img}
+    price={content.price}/>
   );  
 }
 

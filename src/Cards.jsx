@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Cards(props) {
  
-  const [price,increase]=useState([])
+  
   
   // const [count,setCount] = useState(null)
    
@@ -27,7 +27,7 @@ function Cards(props) {
              <div className="card-body">
                <h5 className="card-title justify d-flex justify-content-center">{props.name}</h5>
               <div  className='d-flex justify-content-center' >
-                Rs:{props.price} 
+                Rs:{props.price } <del>Rs:{props.price+1000}</del>
               </div>
               <div></div>
               <div className='d-flex justify-content-center'> 

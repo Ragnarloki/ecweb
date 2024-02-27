@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../AppCard.css'
 import Cards from '../Cards.jsx'
 import contents from '../contents'
@@ -15,12 +15,14 @@ function createCard(content){
 }
 
 function Collection() {
+  const [cart,setCart]=useState([]);
+
   return (
     <div>
-        <Navbar/>
+        <Navbar size={1}/>
         <div>
         <div className='map'>
-      {contents.map(createCard)}
+      {contents.map(createCard)} 
       </div>
       </div>
 

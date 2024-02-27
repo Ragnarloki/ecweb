@@ -2,21 +2,10 @@ import React, { useState } from 'react'
 import './Card.css'
 import { Link } from 'react-router-dom'
 
-function Cards(props) {
+function Cards(props,) {
  
   
   
-  // const [count,setCount] = useState(null)
-   
-  // function increase(){
-
-  //   setCount(count+1)
-  // }
-
-  
-  // function decrease(){
-  //   setCount(count-1)
-  // }
 
   return (
     

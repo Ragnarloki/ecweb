@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 
 
-function Navbar() {
+function Navbar({size}) {
 
   return (
     <div>
@@ -20,7 +20,7 @@ function Navbar() {
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
           <Link to={'/ecweb/cart'} className="nav-link active" aria-current="page"><MdShoppingCart size={'30px'}/>
-          <sup>{Cards.count}</sup>
+          <sup>{size}</sup>
           </Link>
         </li>
         <li className="nav-item">

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+
 import './Card.css'
 import { Link } from 'react-router-dom'
 
-function Cards(props,) {
+function Cards(props ) {
  
   
   

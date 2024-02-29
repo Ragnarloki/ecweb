@@ -6,18 +6,21 @@ import './Craft.css'
 
 
 
-function Craft(props) {
+function Craft({item}) {
     
+  const {id,fruitname,img,price}=item;
+  
   return (
         <div>
             <Navbar/>
         <div className="container-fluid">
   <div className="row">
     <div className="col-sm-4">
-      <img  className='craftimg' src={props.image} alt="hbvku"/>
+      <img  className='craftimg' src={img} alt="hbvku"/>
     </div>
     <div className="col-sm-8">
-      
+      <h1>{fruitname}</h1>
+      <h2>{price}</h2>
     </div>
   </div>
   </div>

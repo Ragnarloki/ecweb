@@ -1,14 +1,16 @@
 import React from 'react'
 import Craft from './Craft';
 import contents from './contents';
+ 
+function Craftcollection({handleClick}) {
+
   
-function Craftcollection() {
-  
-    return (<div><Craft 
-       
-        key={contents[0].id}
-        name={contents[0].name}        
-        image={contents[0].img}/>
+    return (<div>
+      {
+            contents.map((item)=>(
+                <Craft item={item} key={item.id} handleClick={handleClick}/>
+            ))
+        }
      </div>);  
    }
 

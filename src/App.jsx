@@ -13,13 +13,15 @@ import Collection from './components/Collection'
 
 
 function App() {
-  return (
+  return (<div>
+    
     <BrowserRouter>
     <Routes>
      <Route path='/ecweb' element={<Collection/>}></Route>
      <Route path='/ecweb/cart' element={<Craftcollection/>}></Route>
    </Routes>
 </BrowserRouter>
+</div>
 
   )
 }

@@ -7,18 +7,23 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Craftcollection from './Craftcollection'
 import Craft from './Craft'
 import Collection from './components/Collection'
+import CraftNavbar from './CraftNavbar'
 
 
 
 
 
 function App() {
+  const handleClick=(item)=>{
+    console.log(item);
+  
+  }
   return (<div>
     
     <BrowserRouter>
     <Routes>
-     <Route path='/ecweb' element={<Collection/>}></Route>
-     <Route path='/ecweb/cart' element={<Craftcollection/>}></Route>
+     <Route path='/ecweb' element={<Collection  handleClick={handleClick}/>}></Route>
+     <Route path='/ecweb/cart' element={<CraftNavbar/>}></Route>
    </Routes>
 </BrowserRouter>
 </div>

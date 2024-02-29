@@ -14,16 +14,15 @@ import Navbar from './Navbar/Navbar.jsx'
 //   );  
 // }
 
-function Collection({handleClick}) {
-  const [cart,setCart]=useState([]);
-
+function Collection({handleClick,handleclick}) {
+  
   return (
     <div>
-        <Navbar size={1}/>
+
         <div>
         <div className='map'>
         {contents.map((item)=>(
-                <Cards item={item} key={item.id} handleClick={handleClick}/>
+                <Cards item={item} key={item.id} handleClick={handleClick} handleclick={handleclick}/>
             ))}</div>
       </div>
 

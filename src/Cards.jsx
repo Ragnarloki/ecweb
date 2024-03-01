@@ -13,7 +13,7 @@ function Cards({item,handleClick,handleclick}) {
     
         
         <div className=" card ">
-        <Link to={'/ecweb/cart'} onClick={()=>handleClick(item)}><img src={img}  height={'250px'} width={'200px'}/>  
+        <Link to={'/ecweb/craft'} onClick={()=>handleClick(item)}><img src={img}  height={'250px'} width={'200px'}/>  
         </Link>
              <div className="card-body">
                <h5 className="card-title justify d-flex justify-content-center">{fruitname}</h5>

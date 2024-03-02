@@ -39,7 +39,7 @@ function App() {
       
      <Route path='/ecweb' element={<Collection  handleClick={handleClick} handleclick={handleclick}/>}></Route>
      <Route path='/ecweb/Craft' element={<Craftcollection/>}></Route>
-     <Route path='/ecweb/Cart'  element={<Cart cart={cart} setCart={setCart}/>}/>
+     <Route path='/ecweb/Cart'  element={<Cart cart={cart} setCart={setCart} size={cart.length}/>}/>
    </Routes>
 </BrowserRouter>
 </div>

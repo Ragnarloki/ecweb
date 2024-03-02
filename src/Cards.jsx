@@ -18,7 +18,7 @@ function Cards({item,handleClick,handleclick}) {
              <div className="card-body">
                <h5 className="card-title justify d-flex justify-content-center">{fruitname}</h5>
               <div  className='d-flex justify-content-center' >
-                Rs:{price } <del>Rs:{price+1000}</del>
+                Rs:{price } Rs:<del>{price+1000}</del>
               </div>
               <div></div>
               <div className='d-flex justify-content-center'> 

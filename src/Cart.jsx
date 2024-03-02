@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./cart.css"
 import { Link } from 'react-router-dom'
 
-function Cart({cart,setCart,size}){
+function Cart({cart,setCart,size,item}){
 
  const [price,setprice]=useState(0);
  const [count,setCount]=useState(1);
@@ -20,7 +20,7 @@ if(size===0){
       if(count>1){
       const arr=cart.filter((item)=>item.id !== id);
       console.log(arr)
-      arr(setCount(count-1))      
+      setCount(count-1)      
       }
       if(count<=1){
         const arr=cart.filter((item)=>item.id !== id);
@@ -43,15 +43,20 @@ const handleremove = (id)=>{
 
   return (
     <div >
+         {/* <h1>Total amount:{item.price}</h1> */}
         {
             cart.map((item)=>(
+              
+               
                 <div key={item.id} >
+
+                  <h3>Total {item.fruitname} price:{item.price*count}</h3>
      <div className='container'>
       <div className='row'>  
         <div className='col-8 d-flex justify-content-center '>             
   <img src={item.img}  alt="..." height={"250px"} width={"200px"}/>
   </div>
-  <div className='col-4 ' style={{height:"max",display:"flex",alignItems:"center"}}>
+  <div className='col-4 '>
     <h5 className=" d-flex justify-content-center t-20px">{item.fruitname}</h5>
     <h3 className=' d-flex justify-content-center'>Rs:{item.price} Rs:<del>{item.price}</del></h3>
     <div className=' d-flex justify-content-center justify-content-evenly'>
@@ -63,7 +68,8 @@ const handleremove = (id)=>{
     </div>
 <hr />
                 </div>
-            ))
+     
+      ))
         }
     </div>
   )

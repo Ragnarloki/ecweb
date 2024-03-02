@@ -11,7 +11,7 @@ if(size===0){
   return(
   <div >
     <h1 className=' d-flex justify-content-center cart_empty'>Your cart is empty</h1>
-    <Link to={'/ecweb'} className=' d-flex justify-content-center cart_empty'>go to shop-cart</Link>
+    <Link to={'/ecweb/'} className=' d-flex justify-content-center cart_empty'>go to shop-cart</Link>
   </div>)
 
 }
@@ -42,20 +42,26 @@ const handleremove = (id)=>{
 
 
   return (
-    <div className='map'>
+    <div >
         {
             cart.map((item)=>(
                 <div key={item.id} >
-                    <div className="card" >
+     <div className='container'>
+      <div className='row'>  
+        <div className='col-8 d-flex justify-content-center '>             
   <img src={item.img}  alt="..." height={"250px"} width={"200px"}/>
-    <h5 className="card-title d-flex justify-content-center">{item.fruitname}</h5>
-    <h3 className='cart-title d-flex justify-content-center'>Rs:{item.price} Rs:<del>{item.price}</del></h3>
-    <div className='cart-title d-flex justify-content-center justify-content-evenly'>
+  </div>
+  <div className='col-4 ' style={{height:"max",display:"flex",alignItems:"center"}}>
+    <h5 className=" d-flex justify-content-center t-20px">{item.fruitname}</h5>
+    <h3 className=' d-flex justify-content-center'>Rs:{item.price} Rs:<del>{item.price}</del></h3>
+    <div className=' d-flex justify-content-center justify-content-evenly'>
     <button className='button' onClick={()=>minus(item.id)}>-</button><h3 className='d-flex '> {count}</h3><button onClick={plus} className='button'>+</button>
     </div>
-    <div className="card-title d-flex justify-content-center"><button onClick={()=>handleremove(item.id)}>remove</button></div> 
-  </div>
-
+    <div className="d-flex justify-content-center"><button onClick={()=>handleremove(item.id)}>remove</button></div> 
+    </div>
+      </div>
+    </div>
+<hr />
                 </div>
             ))
         }

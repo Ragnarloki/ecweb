@@ -19,7 +19,7 @@ if(size===0){
  const minus=(id)=>{
       if(count>1){
       const arr=cart.filter((item)=>item.id !== id);
-      console.log(arr)
+      
       setCount(count-1)      
       }
       if(count<=1){
@@ -58,7 +58,7 @@ const handleremove = (id)=>{
   </div>
   <div className='col-4 '>
     <h5 className=" d-flex justify-content-center t-20px">{item.fruitname}</h5>
-    <h3 className=' d-flex justify-content-center'>Rs:{item.price} Rs:<del>{item.price}</del></h3>
+    <h3 className=' d-flex justify-content-center'>Rs:{item.price} </h3>
     <div className=' d-flex justify-content-center justify-content-evenly'>
     <button className='button' onClick={()=>minus(item.id)}>-</button><h3 className='d-flex '> {count}</h3><button onClick={plus} className='button'>+</button>
     </div>

@@ -1,9 +1,20 @@
 import React, { useState } from 'react'
+import "./cart.css"
+import { Link } from 'react-router-dom'
 
-function Cart({cart,setCart}){
+function Cart({cart,setCart,size}){
 
  const [price,setprice]=useState(0);
  const [count,setCount]=useState(1);
+
+if(size===0){
+  return(
+  <div >
+    <h1 className=' d-flex justify-content-center cart_empty'>Your cart is empty</h1>
+    <Link to={'/ecweb'} className=' d-flex justify-content-center cart_empty'>go to shop-cart</Link>
+  </div>)
+
+}
 
  const minus=(id)=>{
       if(count>1){

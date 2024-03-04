@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import "./cart.css"
 import { Link } from 'react-router-dom'
-
+import contents from './contents';
 function Cart({cart,setCart,size,item}){
 
- const [price,setprice]=useState(0);
+ const [Price,setprice]=useState(0);
  const [count,setCount]=useState(1);
 
 if(size===0){
@@ -43,14 +43,15 @@ const handleremove = (id)=>{
 
   return (
     <div >
-         {/* <h1>Total amount:{item.price}</h1> */}
-        {
+      {
             cart.map((item)=>(
               
                
                 <div key={item.id} >
 
                   <h3>Total {item.fruitname} price:{item.price*count}</h3>
+                  <h3>price:{contents[item.id-1].price*count}</h3>
+
      <div className='container'>
       <div className='row'>  
         <div className='col-8 d-flex justify-content-center '>             
@@ -64,14 +65,15 @@ const handleremove = (id)=>{
     </div>
     <div className="d-flex justify-content-center"><button onClick={()=>handleremove(item.id)}>remove</button></div> 
     </div>
+    
       </div>
     </div>
 <hr />
                 </div>
-     
+    
       ))
         }
-    </div>
+     </div>
   )
 }
 

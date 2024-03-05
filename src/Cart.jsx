@@ -17,14 +17,12 @@ if(size===0){
 
 }
 
-const click=()=>{
-var no=document.getElementById("no");
-var setprice= no.options[no.selectedIndex].text;
-}
+
 
  const minus=(id)=>{
       if(count>1){
       const arr=cart.filter((item)=>item.id !== id);
+      console.log(arr)
       
       setCount(count-1)      
       }
@@ -67,8 +65,8 @@ const handleremove = (id)=>{
     <h3 className=' d-flex justify-content-center'>Rs:{item.price} </h3>
     <div className=' d-flex justify-content-center justify-content-evenly'>
     <button className='button' onClick={()=>minus(item.id)}>-</button><h3 className='d-flex '> {count}</h3><button onClick={plus} className='button'>+</button>
-    </div>
-    <select className="d-flex justify-content-center" id="no">
+    </div>{
+    <select className="d-flex justify-content-center" id="no" onChange={event => setprice(event.target.value)}>
     
     <option>1</option>
     <option>2</option>
@@ -79,8 +77,7 @@ const handleremove = (id)=>{
     <option>7</option>
     <option>8</option>
     <option>9</option>
-  </select>
-  <button onClick={click}>add</button>
+  </select>}
   <div className="d-flex justify-content-center"><button onClick={()=>handleremove(item.id)}>remove</button></div> 
     </div>
     

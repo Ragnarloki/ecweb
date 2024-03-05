@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import "./cart.css"
 import { Link } from 'react-router-dom'
 import contents from './contents';
+import Totalprice from './Totalprice';
 function Cart({cart,setCart,size,item}){
 
- const [Price,setprice]=useState(0);
+ const [Price,setprice]=useState(1);
  const [count,setCount]=useState(1);
 
 if(size===0){
@@ -14,6 +15,11 @@ if(size===0){
     <Link to={'/ecweb/'} className=' d-flex justify-content-center cart_empty'>go to shop-cart</Link>
   </div>)
 
+}
+
+const click=()=>{
+var no=document.getElementById("no");
+var setprice= no.options[no.selectedIndex].text;
 }
 
  const minus=(id)=>{
@@ -49,8 +55,7 @@ const handleremove = (id)=>{
                
                 <div key={item.id} >
 
-                  <h3>Total {item.fruitname} price:{item.price*count}</h3>
-                  <h3>price:{contents[item.id-1].price*count}</h3>
+                  <h3>Total {item.fruitname} price:{item.price*Price}</h3>
 
      <div className='container'>
       <div className='row'>  
@@ -63,7 +68,20 @@ const handleremove = (id)=>{
     <div className=' d-flex justify-content-center justify-content-evenly'>
     <button className='button' onClick={()=>minus(item.id)}>-</button><h3 className='d-flex '> {count}</h3><button onClick={plus} className='button'>+</button>
     </div>
-    <div className="d-flex justify-content-center"><button onClick={()=>handleremove(item.id)}>remove</button></div> 
+    <select className="d-flex justify-content-center" id="no">
+    
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+  </select>
+  <button onClick={click}>add</button>
+  <div className="d-flex justify-content-center"><button onClick={()=>handleremove(item.id)}>remove</button></div> 
     </div>
     
       </div>
@@ -73,6 +91,7 @@ const handleremove = (id)=>{
     
       ))
         }
+        <h1 className='footer'><Totalprice /></h1>
      </div>
   )
 }

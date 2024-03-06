@@ -5,7 +5,6 @@ import contents from './contents';
 import Totalprice from './Totalprice';
 function Cart({cart,setCart,size,item}){
 
- const [Price,setprice]=useState(1);
  const [count,setCount]=useState(1);
 
 if(size===0){
@@ -21,8 +20,6 @@ if(size===0){
 
  const minus=(id)=>{
       if(count>1){
-      const arr=cart.filter((item)=>item.id !== id);
-      console.log(arr)
       
       setCount(count-1)      
       }
@@ -53,7 +50,7 @@ const handleremove = (id)=>{
                
                 <div key={item.id} >
 
-                  <h3>Total {item.fruitname} price:{item.price*Price}</h3>
+                  <h3>Total {item.fruitname} price:{item.price*count}</h3>
 
      <div className='container'>
       <div className='row'>  
@@ -65,19 +62,7 @@ const handleremove = (id)=>{
     <h3 className=' d-flex justify-content-center'>Rs:{item.price} </h3>
     <div className=' d-flex justify-content-center justify-content-evenly'>
     <button className='button' onClick={()=>minus(item.id)}>-</button><h3 className='d-flex '> {count}</h3><button onClick={plus} className='button'>+</button>
-    </div>{
-    <select className="d-flex justify-content-center" id="no" onChange={event => setprice(event.target.value)}>
-    
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-    <option>7</option>
-    <option>8</option>
-    <option>9</option>
-  </select>}
+    </div>
   <div className="d-flex justify-content-center"><button onClick={()=>handleremove(item.id)}>remove</button></div> 
     </div>
     

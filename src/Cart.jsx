@@ -1,11 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./cart.css"
 import { Link } from 'react-router-dom'
 import contents from './contents';
 import Totalprice from './Totalprice';
-function Cart({cart,setCart,size,item}){
+function Cart({cart,setCart,size,item,handleChange}){
 
- const [count,setCount]=useState(1);
+
+ const [Price,setPrice]=useState(0);
+
+ const handlePrice=()=>{
+     let ans=0
+     cart.map((item)=>{
+      ans+=item.add*item.price
+     })
+     setPrice(ans)
+ }
+ 
+ useEffect(()=>{
+    handlePrice();
+ })
 
 if(size===0){
   return(
@@ -18,22 +31,22 @@ if(size===0){
 
 
 
- const minus=(id)=>{
-      if(count>1){
+//  const minus=(id)=>{
+//       if(count>1){
       
-      setCount(count-1)      
-      }
-      if(count<=1){
-        const arr=cart.filter((item)=>item.id !== id);
-        setCart(arr)
-      }
+//       setCount(count-1)      
+//       }
+//       if(count<=1){
+//         const arr=cart.filter((item)=>item.id !== id);
+//         setCart(arr)
+//       }
      
- }
+//  }
 
-function plus(){
-  setCount(count+1)
+// function plus(){
+//   setCount(count+1)
   
-}
+// }
 
 const handleremove = (id)=>{
      
@@ -45,12 +58,12 @@ const handleremove = (id)=>{
   return (
     <div >
       {
-            cart.map((item)=>(
+            cart?.map((item)=>(
               
                
                 <div key={item.id} >
 
-                  <h3>Total {item.fruitname} price:{item.price*count}</h3>
+                  <h3>Total {item.fruitname} price:{item.price}</h3>
 
      <div className='container'>
       <div className='row'>  
@@ -61,7 +74,7 @@ const handleremove = (id)=>{
     <h5 className=" d-flex justify-content-center t-20px">{item.fruitname}</h5>
     <h3 className=' d-flex justify-content-center'>Rs:{item.price} </h3>
     <div className=' d-flex justify-content-center justify-content-evenly'>
-    <button className='button' onClick={()=>minus(item.id)}>-</button><h3 className='d-flex '> {count}</h3><button onClick={plus} className='button'>+</button>
+    <button className='button' onClick={()=>handleChange(item,-1)}>-</button><h3 className='d-flex '> {item.add}</h3><button onClick={()=>handleChange(item,+1)} className='button'>+</button>
     </div>
   <div className="d-flex justify-content-center"><button onClick={()=>handleremove(item.id)}>remove</button></div> 
     </div>
@@ -73,7 +86,7 @@ const handleremove = (id)=>{
     
       ))
         }
-        <h1 className='footer'><Totalprice /></h1>
+        <h1 className='footer'><Totalprice />{Price}</h1>
      </div>
   )
 }

@@ -27,14 +27,31 @@ function App() {
   const handleclick=(item)=>{
     
     let isPresent=false;
-    cart.forEach((contents)=>{
-      if(item.id===contents.id)
+    cart.forEach((products)=>{
+      if(item.id===products.id)
          isPresent=true;
     })
     if(isPresent)
        return;
     setCart([...cart,item]);
 }
+
+const handleChange=(item, d)=>{
+  let ind = -1;
+  cart.forEach((data,index)=>{
+    if (data.id===item.id)
+          ind = index;
+  });
+
+  const tempArr = cart;
+  tempArr[ind].add+= d;
+  if(tempArr[ind].add === 0)
+      tempArr[ind].add = 1;
+  setCart([...tempArr])
+ 
+}
+
+
   return (<div>
     
     <BrowserRouter>
@@ -43,7 +60,7 @@ function App() {
       
      <Route path='/ecweb' element={<Collection  handleClick={handleClick} handleclick={handleclick}/>}></Route>
      {/* <Route path='/ecweb/Craft' element={<Craftcollection  handleclick={handleclick} handleClick={handleClick}/>}></Route> */}
-     <Route path='/ecweb/Cart'  element={<Cart cart={cart} setCart={setCart} size={cart.length}/>}/>
+     <Route path='/ecweb/Cart'  element={<Cart cart={cart} setCart={setCart} size={cart.length} handleChange={handleChange}/>}/>
      <Route path='/ecweb/Craft'  element={<Craft cart={cart} setCart={setCart} size={cart.length}/>}/>
    </Routes>
 </BrowserRouter>

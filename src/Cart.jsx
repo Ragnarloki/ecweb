@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./cart.css"
 import { Link } from 'react-router-dom'
-import contents from './contents';
-import Totalprice from './Totalprice';
 function Cart({cart,setCart,size,item,handleChange}){
 
 
@@ -86,7 +84,7 @@ const handleremove = (id)=>{
     
       ))
         }
-        <h1 className='footer'><Totalprice />{Price}</h1>
+        <h1 className='footer'>TotalPrice:{Price}</h1>
      </div>
   )
 }

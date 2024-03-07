@@ -63,7 +63,7 @@ const handleremove = (id)=>{
                
                 <div key={item.id} >
 
-                  <h3>Total {item.fruitname} price:{item.price}</h3>
+                  <h3>Total {item.fruitname} price:{item.price*item.add}</h3>
 
      <div className='container'>
       <div className='row'>  

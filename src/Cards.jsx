@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import {motion} from 'framer-motion';
 import './Card.css'
 import { Link } from 'react-router-dom'
 
@@ -12,7 +12,10 @@ function Cards({item,handleClick,handleclick}) {
   return (
     
         
-        <div className=" card ">
+        <motion.div className=" card "
+        intial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}>
         <Link to={'/ecweb/craft'} onClick={()=>handleClick(item)}><img src={img}  height={'250px'} width={'200px'}/>  
         </Link>
              <div className="card-body">
@@ -26,7 +29,7 @@ function Cards({item,handleClick,handleclick}) {
               </div>
              </div>
         
-             </div>
+             </motion.div>
   )
 }
 

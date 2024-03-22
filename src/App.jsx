@@ -59,7 +59,6 @@ const handleChange=(item, d)=>{
     <Routes>
       
      <Route path='/ecweb' element={<Collection  handleClick={handleClick} handleclick={handleclick}/>}></Route>
-     {/* <Route path='/ecweb/Craft' element={<Craftcollection  handleclick={handleclick} handleClick={handleClick}/>}></Route> */}
      <Route path='/ecweb/Cart'  element={<Cart cart={cart} setCart={setCart} size={cart.length} handleChange={handleChange}/>}/>
      <Route path='/ecweb/Craft'  element={<Craft cart={cart} setCart={setCart} size={cart.length}/>}/>
    </Routes>
